@@ -192,7 +192,7 @@ function createXML(key, value2) {
     </values>`;
     data += `</CustomMetadata>`;
 
-    fs.writeFile("C:\\Users\\fesilveira\\Documents\\node-express-rest-api-example-master\\node-express-rest-api-example-master\\xml\\DomainInputOutput."+label.replace(/\s/g, '')+".md-meta.xml", data, function(err) {
+    fs.writeFile(__dirname+"/xml/DomainInputOutput."+label.replace(/\s/g, '')+".md-meta.xml", data, function(err) {
         if(err) {
             return console.log(err);
         }
@@ -202,8 +202,8 @@ function createXML(key, value2) {
 
 class ZipClass {
     static async zipXML() {
-        var uri_in = __dirname+"\\xml";
-        var uri_out = __dirname+"\\xml.zip";
+        var uri_in = __dirname+"/xml";
+        var uri_out = __dirname+"/xml.zip";
         await zip.zip(uri_in, uri_out);
     }
 }
