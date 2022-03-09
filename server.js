@@ -13,7 +13,7 @@ let cadastro = JSON.parse(rawdata);
 var zip = require("zip-a-folder")
 
 
-var HTTP_PORT = process.env.PORT || 8080
+var HTTP_PORT = process.env.PORT || 8000
 
 //  var bodyParser = require("body-parser");
 //app.use(bodyParser.urlencoded({ extended: false }));
@@ -202,8 +202,8 @@ function createXML(key, value2) {
 
 class ZipClass {
     static async zipXML() {
-        var uri_in = "C:\\Users\\fesilveira\\Documents\\node-express-rest-api-example-master\\node-express-rest-api-example-master\\xml";
-        var uri_out = "C:\\Users\\fesilveira\\Documents\\node-express-rest-api-example-master\\node-express-rest-api-example-master\\xml.zip";
+        var uri_in = __dirname+"\\xml";
+        var uri_out = __dirname+"\\xml.zip";
         await zip.zip(uri_in, uri_out);
     }
 }
