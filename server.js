@@ -192,7 +192,9 @@ function createXML(key, value2) {
     </values>`;
     data += `</CustomMetadata>`;
 
-    fs.writeFile(__dirname+"/xml/DomainInputOutput."+label.replace(/\s/g, '')+".md-meta.xml", data, function(err) {
+    var uri = path.join(__dirname,"/xml/DomainInputOutput."+label.replace(/\s/g, '')+".md-meta.xml") 
+
+    fs.writeFile(uri, data, function(err) {
         if(err) {
             return console.log(err);
         }
