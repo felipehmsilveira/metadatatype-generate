@@ -13,7 +13,7 @@ let cadastro = JSON.parse(rawdata);
 var zip = require("zip-a-folder")
 
 
-var HTTP_PORT = 8000
+var HTTP_PORT = process.env.PORT || 8080
 
 //  var bodyParser = require("body-parser");
 //app.use(bodyParser.urlencoded({ extended: false }));
