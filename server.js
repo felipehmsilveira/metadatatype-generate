@@ -1,6 +1,9 @@
 var express = require("express")
 var app = express()
 
+
+app.use(express.static('xml'));
+
 var md5 = require("md5")
 //var xmlBuilder = require("xmlBuilder")
 var path = require('path');
